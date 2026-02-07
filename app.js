@@ -178,9 +178,10 @@ app.delete("/order/:id", async(req,res)=>
     res.redirect("/cart");
 })
 
+module.exports= app;
 
 
-app.listen(port, ()=>
-{
-    console.log("Server is live");
-})
+// app.listen(port, ()=>
+// {
+//     console.log("Server is live");
+// })
