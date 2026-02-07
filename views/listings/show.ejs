@@ -1,0 +1,58 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="showdiv">
+    <img src="<%= info.image.url %>" alt="err" class="li-img card-text">
+    <ul class="list">
+
+       <b><li id="tit" class="card-text"><%= info.title %></li></b>
+       <li class="card-text"><%= info.description %></li>
+       <li class="card-text">&#8377;
+             <%= info.price.toLocaleString("en-IN")%></li>
+     
+    </ul>
+     <form class="order-form" method="post"  action="/cartitems/<%= info._id %>">
+    <button class="btn btn-primary mb-2 me-2" >Order </button>
+       <div class="count quantity-box">
+            <i class="fa-solid fa-minus minus" ></i>
+            <input type="number" min="1" value="1" Id="count-in" class="quantity-input">
+            <i class="fa-solid fa-plus plus"></i>
+        </div>
+     </form>
+
+    <a href="/items/<%= info._id %>/edit">
+        <button class="btn btn-secondary mb-2 me-2">Edit</button>
+       
+    </a>
+    <form method="post" action="/items/<%= info._id%>?_method=Delete">
+        <button class="btn btn-danger">Delete</button>
+    </form>
+   </div>
+
+</body>
+<script>
+document.addEventListener("click", (e) => {
+
+  // INCREASE
+  if (e.target.classList.contains("plus")) {
+    const input = e.target
+      .closest(".quantity-box")
+      .querySelector(".quantity-input");
+
+    input.value = parseInt(input.value) + 1;
+  }
+
+  // DECREASE
+  if (e.target.classList.contains("minus")) {
+    const input = e.target
+      .closest(".quantity-box")
+      .querySelector(".quantity-input");
+
+    if (parseInt(input.value) > 1) {
+      input.value = parseInt(input.value) - 1;
+    }
+  }
+
+});
+
+
+</script>

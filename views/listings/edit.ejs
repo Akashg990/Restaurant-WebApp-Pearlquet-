@@ -1,0 +1,31 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="container">
+    <h2 class="card-text">Edit food item</h2>
+     <form method="post" action="/items/<%= info._id%>?_method=PUT" enctype="multipart/form-data" >
+         
+      <div class="mb-3">
+         <label for="titles" class="form-label card-text">Food Name</label>
+           <br>
+         <input type="text" value="<%= info.title %>" name="item[title]" class="form-control " required >
+      </div>
+        <div class="mb-3">
+          <label for="titles" class="form-label card-text">Enter Description</label>
+          <br>
+          <textarea  id="" name="item[description]" class="form-control "><%= info.description %> </textarea>
+        </div>
+         <div class="mb-3">
+          <label for="image" class="form-label card-text">Upload New Image</label>
+          <br>
+          <input type="file" name="item[image]" id="image" class="form-control ">
+        </div>
+        <div class="mb-3">
+          <label for="titles" class="form-label card-text">Enter Price</label>
+          <br>
+         <input type="number" name="item[price]" id="" value="<%= info.price %>" min="0" class="form-control " required>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+     </form>
+   </div>
+
+</body>

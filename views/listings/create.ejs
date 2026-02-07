@@ -1,0 +1,33 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+ <div class="container">
+    <h2 class="card-text">Add a new food item</h2>
+     <form method="post" action="/additems" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="titles" class="form-label card-text">Food Name</label>
+        <br>
+        <input type="text" placeholder="Enter food name" name="item[title]" id="titles" class="form-control " required>
+      </div>
+       
+        <div class="mb-3">
+          <label for="desc" class="form-label card-text">Food Description</label>
+          <br>
+            <textarea  id="desc" name="item[description]" class="form-control " required> </textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="imag" class="form-label card-text">Upload Image</label>
+          <br>
+          <input name="item[image]" type="file" id="imag" class="form-control" required >
+        </div>
+       
+        <div class="mb-3">
+          <label for="prize" class="form-label card-text">Price</label>
+          <br>
+          <input type="number" name="item[price]" id="prize" placeholder="Enter price" min="0" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+     </form>
+   </div>
+</body>
+</html>

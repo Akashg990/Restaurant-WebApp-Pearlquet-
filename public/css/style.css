@@ -1,0 +1,214 @@
+
+.navbar
+{
+    background-color: #1f7e93;
+}
+
+.containers
+{
+    background-color: rgb(235 247 255);;
+    margin: 0;
+    padding: 2rem;
+      background-image: url("https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?q=80&w=748&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;        /* Covers full screen */
+  background-position: center;   /* Keeps image centered */
+  background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.container
+{
+    width: 40rem !important;
+    line-height: 3rem;
+}
+
+.sear
+{
+    width: 20rem !important;
+}
+
+.card
+{
+    border: none !important;
+    margin-bottom: 1rem;
+    padding: 0 !important;
+    margin-left: 2.5rem !important;
+    background-color: unset !important;
+}
+
+.card-img-top
+{
+border-radius: 1rem !important;
+width: 100% !important;
+object-fit: cover !important;
+
+}
+
+.card-body
+{
+    padding: 0.5rem !important;
+}
+
+.card-text 
+{
+  color: aliceblue;
+}
+#tit
+{
+    font-size: 2rem;
+}
+
+.li-img
+{
+    height: 32rem;
+    width: 40rem;
+}
+.list
+{
+    list-style: none;
+    padding: 0 !important;
+}
+
+.order-form
+{
+    display: flex;
+    gap: 2rem;
+}
+
+.count
+{
+ border: 2px solid gray;
+ height: 1.8rem;
+ background-color: rgb(250, 252, 252);
+ border-radius: 1rem;
+ padding:0 5px 0 5px;
+}
+
+.order-form input 
+{
+    width: 2rem !important;
+    height: 1rem;
+    border: none;
+    all: unset;
+    padding-left: 12px;
+    text-align: center;
+}
+.order-form i:hover
+{
+    cursor: pointer;
+}
+.showdiv
+{
+    padding-left: 20rem;
+}
+
+.orders-list
+{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.ord-back
+{
+ background-color: rgba(106, 105, 105, 0.121);
+ padding: 0.5rem;
+ border-radius: 1rem;
+}
+
+.ord-li 
+{
+   
+    padding: 1rem 4rem 3rem 3rem !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.foot
+{
+    background-color: #2c133f;
+}
+
+.table-info
+{
+    background-color:rgba(84, 84, 84, 0.331) !important;
+    padding: 2rem !important;
+}
+
+
+.card-img-overlay
+{
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.card-img-overlay:hover
+{
+    opacity: 0.2;
+    background-color: white;
+}
+
+
+
+
+@media(max-width:750px)
+{
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .containers{
+        padding: 15px 0 0 0;
+    }
+
+   .card
+   {
+    margin-left: 3.5rem !important;
+   }
+    .row
+    {
+        width: 25rem;
+    }
+    .container 
+    {
+        width: 20rem !important;
+    }
+
+    .sear{
+        width: 17rem !important;
+    }
+
+    .showdiv
+    {
+        padding-left: 2rem;
+    }
+
+    .li-img
+    {
+        width: 20rem;
+        height: 20rem;
+    }
+    .mb-3
+    {
+        width: 12rem !important;
+    }
+   
+    .form-control
+    {
+        width: 15rem !important;
+    }
+
+    .table-responsive
+    {
+        padding: 0 !important;
+    }
+
+   .ord-back
+   {
+     margin: 0.8rem !important;
+   }
+
+   tbody
+   {
+    width: 90px !important;
+   }
+}

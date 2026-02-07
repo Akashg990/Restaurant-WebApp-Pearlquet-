@@ -1,0 +1,43 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+<div class="container  ord-back">
+    <h3 class="card-text" style="text-align: center;">Your Order Summary</h3>
+    <div class="container card-text ord-li table-responsive">
+       
+        <table class="table-info ">
+            <tbody>
+                 <%for (let item of list) {%>
+                <tr class="card-text">
+                  <td class="px-4">
+                    <%= item.title %>
+                  </td>
+                  <td class="px-4">
+                    <%= item.price %>
+                  </td>
+                  <td class="px-5">
+                         <form method="post" action="/order/<%= item._id %>?_method=Delete">
+                <button class="btn btn-danger">
+                    Remove
+                </button>
+            </form>
+                  </td>
+                  </tr>
+                 <% } %>
+            </thead>
+
+        </table>
+
+        <div style="text-align: center;">
+              <button class="btn btn-primary">Place Order</button>
+        </div>
+      
+      
+    </div>
+  
+    
+</div>
+
+
+
+            
+</body>
